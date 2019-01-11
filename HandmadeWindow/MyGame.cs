@@ -1,8 +1,9 @@
 ﻿using HandmadeWindow.SEngine;
+using System;
 
 namespace HandmadeWindow
 {
-    class MyGame : GameWindow
+    class MyGame : GameWindow, IDisposable
     {
         public override void Update()
         {
@@ -29,6 +30,11 @@ namespace HandmadeWindow
                     p++;
                 }
             }
+        }
+
+        public void Dispose()
+        {
+            // TODO
         }
     }
 }

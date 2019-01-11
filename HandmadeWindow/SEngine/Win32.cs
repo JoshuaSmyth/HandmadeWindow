@@ -239,5 +239,8 @@ namespace Win32Hello.SEngine
 
         [DllImport("user32.dll")]
         static extern IntPtr GetDC(HandleRef hWnd);
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern bool SetWindowText(IntPtr hwnd, String lpString);
     }
 }

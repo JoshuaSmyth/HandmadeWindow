@@ -115,6 +115,7 @@ namespace HandmadeWindow.SEngine
                 fps = frameCount / (sw.ElapsedMilliseconds * 0.001f);
 
                 // TODO Do some sleeping to maintain fps limits
+                SetWindowText(hWnd, "Fps:" + fps);
             }
         }
 

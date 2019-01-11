@@ -7,9 +7,11 @@ namespace HandmadeWindow
         [STAThread]
         static void Main()
         {
-            var myGame = new MyGame();
-            myGame.Init("My Game", 640, 360);
-            myGame.Show();
+            using(var myGame = new MyGame())
+            {
+                myGame.Init("My Game", 1280, 720);
+                myGame.Show();
+            }
         }
     }
 }
